@@ -32,9 +32,9 @@ class Subject:
 class Academy:
     def __init__(self, name, students=None, teachers=None, subjects=None):
         self.name = name
-        self.students = students or []
-        self.teachers = teachers or []
-        self.subjects = subjects or []
+        self.students = students
+        self.teachers = teachers
+        self.subjects = subjects
 
     def add_student(self, student):
         self.students.append(student)
@@ -46,10 +46,10 @@ class Academy:
         self.subjects.append(subject)
 
 teacher1 = Teacher("Сухомлинський Василь", 40, "Male", "Math")
-teacher2 = Teacher("Алчевська Христина", 35, "Female", "Physics")
+teacher2 = Teacher("Алчевська Христина", 25, "Female", "Physics")
 
 student1 = Student("Сергій", 20, "Male", "A")
-student2 = Student("Анна", 22, "Female", "B")
+student2 = Student("Анна", 19, "Female", "B")
 
 math_subject = Subject("Mathematics", teacher1)
 physics_subject = Subject("Physics", teacher2)
